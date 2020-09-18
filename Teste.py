@@ -48,10 +48,10 @@ while janela_aberta:
         x -= velocidade
 
     if (pos_y_a >= 1200) and (pos_y_b >= 1200) and (pos_y_d >= 1200) and (pos_y_f >= 1200):
-        pos_y_a = randint(-1500, 0) #saco de lixo
-        pos_y_b = randint(-1500, 0) #garrafa
-        pos_y_d = randint(-1500, 0) #pizza
-        pos_y_f = randint(-1500, 0) #refri
+        pos_y_a = randint(-2500, 0) #saco de lixo
+        pos_y_b = randint(-1700, 0) #garrafa
+        pos_y_d = randint(-2000, 0) #pizza
+        pos_y_f = randint(-1700, 100) #refri
 
     if (timer < 25):
         timer += 1
@@ -60,6 +60,24 @@ while janela_aberta:
         tempo_segundo += 1
         texto = font.render(':' +str(tempo_segundo),  True, (109, 212, 205))
         timer = 0
+
+    #Colisão:
+
+    if((pos_y_f - 350) > 590): #refri
+        y = 1500
+
+    if ((pos_y_a -600) > 590): #lixo
+        y = 1500
+
+    if ((pos_y_d  -250) > 590): #jornal
+        y = 1500
+
+    if ((pos_y_b -640) > 590): #garrafa
+        y = 1500
+
+    #Tela de Game Over
+
+
 
     pos_y_a += velocidade_outros -3
     pos_y_b += velocidade_outros -1.5

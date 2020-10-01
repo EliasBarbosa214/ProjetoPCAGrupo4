@@ -5,7 +5,7 @@ from guy import Guy
 class Lixo(pygame.sprite.Sprite):
     def __init__(self, *groups):
         super().__init__(*groups)
-        self.image = pygame.image.load('Imagens/refri.png')
+        self.image = pygame.image.load('Imagens/Refri2.png')
         self.image = pygame.transform.scale(self.image, [40, 70])
         self.rect = pygame.Rect(40, 70, 40, 70)
 
